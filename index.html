@@ -10,6 +10,9 @@
     <div id="root">
 <h1>{{title}}</h1>
 <button v-on:click="changeTitle">Click Me</button>
+<ul>
+    <li v-for="fruit in fruits">{{fruit}}</li>
+</ul>
     </div>
     <script>
          new Vue({
@@ -20,7 +23,9 @@ this.title="hi"
 }
 },
 data:{
-    title:"Hello World!"
+    title:"Hello World!",
+    fruits:[ "Apple","Banana","Orange"]
+
 }
 });
     </script>
