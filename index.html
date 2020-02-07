@@ -7,8 +7,22 @@
     <script src="vue.js"></script>
 </head>
 <body>
+    <div id="root">
+<h1>{{title}}</h1>
+<button v-on:click="changeTitle">Click Me</button>
+    </div>
     <script>
-        
+         new Vue({
+el:"#root",
+methods:{
+changeTitle:function(){
+this.title="hi"
+}
+},
+data:{
+    title:"Hello World!"
+}
+});
     </script>
 </body>
 </html>
